@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="kell.js"></script>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body onload="startTime()"><!--body laadimisel kaivitatakse funktsioon-->
+        <div id="clock">
+        </div>
+        <div id="kell">Tekst
+        </div>
+        <div id="input">
+                <p id="kasutajanimi"></p>
+                Kasutajanimi:
+                <br>
+                <input type="text" id="userName" required>
+                <br>
+                Salasona:<br>
+                <input type="password" id="passWord" required>
+                <br></br>
+                <button type="button" onclick="getInputValue();">Signin</button>
+        </div>    
+    </body>
+</html>
