@@ -1,5 +1,6 @@
 /*window.onload=startTime();/*lehe laadimisel kaivitatakse funktsioon, sel juhul ei pea lisama htmli*/
 var sessionName="thea";
+var signInTime=0;
 function startTime(){
     var today=new Date();
     var date=today.getUTCDate();
@@ -51,15 +52,20 @@ function startTime(){
     }
     document.getElementById("clock").innerHTML=hour +":"+minutes+":"+seconds+" "+date+"."+month+"."+year+" "+tana;
     var time=setTimeout(startTime, 1000);/*(funktsioon, millisekundid millal funktsioon uuesti valja kutsutakse)*/
-    }   
+    }
     function getInputValue(){
         var userName= document.getElementById("userName").value;
         var userName=userName.toLowerCase();
         document.getElementById("kasutajanimi").innerHTML= "Tere, "+userName.charAt(0).toUpperCase() + userName.slice(1)+"!";
         var passWord= document.getElementById("passWord").value;
         console.log(passWord);
+        document.getElementById("kell").style.display = "block"
+        document.getElementById("input").style.display = "none"
+        var signInTime=new Date();
+        console.log(signInTime);
         if (sessionName==userName){
             document.getElementById("kasutajanimi").innerHTML= "Tere, "+userName.charAt(0).toUpperCase() + userName.slice(1)+"! Oled juba sisse logitud.";
         }
 
     }
+    console.log(signInTime);
